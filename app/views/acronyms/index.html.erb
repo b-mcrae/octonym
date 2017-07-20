@@ -1,0 +1,18 @@
+<h1>Acronyms</h1>
+
+<table>
+  <tr>
+    <th>Acronym</th>
+    <th>Definition</th>
+    <th>Description</th>
+  </tr>
+
+  <% @acronyms.each do |acronym| %>
+    <tr>
+      <td><%= acronym.name %></td>
+      <td><%= acronym.definition %></td>
+      <td><%= acronym.description %></td>
+      <td><%= link_to 'Show', acronym_path(acronym) %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,8 +1,12 @@
 class AcronymsController < ApplicationController
+  def index
+    @acronyms = Acronym.all
+  end
+
   def show
     @acronym = Acronym.find(params[:id])
   end
-  
+
   def new
   end
 
