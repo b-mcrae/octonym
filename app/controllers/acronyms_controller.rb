@@ -1,4 +1,6 @@
 class AcronymsController < ApplicationController
+  http_basic_authenticate_with name: "octopus", password: "octosecret", except: [:index, :show]
+
   def index
     @acronyms = Acronym.all
   end
