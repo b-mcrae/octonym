@@ -5,6 +5,7 @@
     <th>Acronym</th>
     <th>Definition</th>
     <th>Description</th>
+    <th colspan="3"></th>
   </tr>
 
   <% @acronyms.each do |acronym| %>
@@ -13,6 +14,8 @@
       <td><%= acronym.definition %></td>
       <td><%= acronym.description %></td>
       <td><%= link_to 'Show', acronym_path(acronym) %></td>
+      <td><%= link_to 'Edit', edit_acronym_path(acronym) %></td>
+      <td><%= link_to 'Destroy', acronym_path(acronym), method: :delete, data: {confirm: 'Are you sure you want to delete the acronym?'} %></td>
     </tr>
   <% end %>
 </table>
